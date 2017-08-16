@@ -1,16 +1,24 @@
 <section class="album-covers container clearfix">
-     
-    <div class="collection-album-container column fourth" ng-repeat="album in collection.albums">  
-     <!-- <div class="collection-album-container column fourth"> -->
+    
+    <!--  <div class="collection-album-container column fourth" ng-repeat="album in collection.albums">  -->
+     <div class="collection-album-container column fourth" ng-repeat="album in collection.albums track by $index"> 
+
          
-         <img src="{{ album.albumArtUrl }}">
-         <!-- <img src="/assets/images/album_covers/01.png"/>  -->
+         <!-- <img src="{{ album.albumArtUrl }}">  -->
+         
+          <img src="{{ $index }}.{{ album.albumArtUrl }}"> 
+         
+          <!--  <img src="/assets/images/album_covers/01.png"/> -->
+         
+          <h3>What is happening?</h3>
+        
          
          <div class="collection-album-info caption">
              <p>
-                 <a class="album-name" ui-sref="album">{{ album.title }}</a>
+             
+                 <a class="album-name" ui-sref="album">{{ album.title }}</a>              
                  <!-- <a class="album-name" ui-sref="album">The Colors</a>  -->
-                 <!-- <a class="album-name" href="album.html">The AAA Colors</a>  -->
+                
                  
                  <br/>
                  
@@ -28,3 +36,5 @@
          </div>
      </div>
  </section>
+ <p>  Hello?</p>
+<ng-include src="'/templates/player_bar.html'"></ng-include>

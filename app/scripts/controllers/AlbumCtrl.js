@@ -2,7 +2,7 @@
      function AlbumCtrl(Fixtures) {    
           
         this.albumData = Fixtures.getAlbum();
-        console.log(this.albumData);
+        console.log("This AlbumC.js albumData vales: " + this.albumData);
      }
  
     

@@ -1,6 +1,6 @@
 (function() {
      function Fixtures() {
-         var Fixtures = {};
+         var  Fixtures = {};
          
          var albumPicasso = {
             title: 'The Colors',
@@ -35,6 +35,14 @@
          
          Fixtures.getAlbum = function() {
             return albumPicasso;
+         };
+         
+         Fixtures.getCollection = function(numberOfAlbums) {
+             console.log("From: Fixtures.js - Num of Album value is: " + numberOfAlbums);
+              var newArray = [];  // this.newArray = [];  makes next line fail "newArray is not defined"
+              newArray.push(numberOfAlbums);
+              numberOfAlbums = newArray;
+             return numberOfAlbums;
          };
          
          return Fixtures;
