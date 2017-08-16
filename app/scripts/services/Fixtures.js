@@ -39,10 +39,11 @@
          
          Fixtures.getCollection = function(numberOfAlbums) {
              console.log("From: Fixtures.js - Num of Album value is: " + numberOfAlbums);
-              var newArray = [];  // this.newArray = [];  makes next line fail "newArray is not defined"
-              newArray.push(numberOfAlbums);
-              numberOfAlbums = newArray;
-             return numberOfAlbums;
+              var albums = [];
+              for ( var i = 0; i < numberOfAlbums; i++)  {
+                  albums.push(albumPicasso)
+              }
+              return albums;
          };
          
          return Fixtures;

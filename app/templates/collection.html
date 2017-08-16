@@ -1,40 +1,21 @@
 <section class="album-covers container clearfix">
     
-    <!--  <div class="collection-album-container column fourth" ng-repeat="album in collection.albums">  -->
      <div class="collection-album-container column fourth" ng-repeat="album in collection.albums track by $index"> 
-
-         
-         <!-- <img src="{{ album.albumArtUrl }}">  -->
-         
-          <img src="{{ $index }}.{{ album.albumArtUrl }}"> 
-         
-          <!--  <img src="/assets/images/album_covers/01.png"/> -->
-         
-          <h3>What is happening?</h3>
-        
-         
+       
+        <img src="{{ album.albumArtUrl }}">
+                          
          <div class="collection-album-info caption">
-             <p>
-             
-                 <a class="album-name" ui-sref="album">{{ album.title }}</a>              
-                 <!-- <a class="album-name" ui-sref="album">The Colors</a>  -->
-                
-                 
+             <p>             
+                 <a class="album-name" ui-sref="album">{{ album.title }}</a>                           
+                 <br/>                 
+                 <a ui-sref="album">{{ album.artist }}</a>        
                  <br/>
-                 
-                 <a ui-sref="album">{{ album.artist }}</a>
-                 <!-- <a ui-sref="album">Pablo Picasso</a> -->
-                 <!-- <a href="album.html">Pablo Picasso</a> -->
-                 
-                 <br/>
-                 X songs
-                 
-                 {{ album.songs.length }} songs
-                 
+                 X songs                 
+                 {{ album.songs.length }} songs                 
                  <br/>
              </p>
          </div>
      </div>
  </section>
- <p>  Hello?</p>
-<ng-include src="'/templates/player_bar.html'"></ng-include>
+ <!--  <p>  Hello?</p>  -->
+<!-- <ng-include src="'/templates/player_bar.html'"></ng-include>  -->
