@@ -1,7 +1,16 @@
 (function() {
+     /*
+     * @function SongPlayer
+     * @desc play and pause a song
+     * @param SongPlayer
+     /*
      function SongPlayer() {
           var SongPlayer = {};
          
+          /**
+          * @desc: current song
+          * @type (Object)
+          */
           var currentSong = null;
          
           /**
@@ -15,19 +24,35 @@
          * @desc Stops currently playing song and loads new audio file as currentBuzzObject
          * @param {Object} song
          */      
-         var setSong = function(song) {
+         var setSong = function(song) { 
             if (currentBuzzObject) {
                 currentBuzzObject.stop();
                 currentSong.playing = null;
             }
 
-           
- 
-    currentSong = song;
+         currentSong = song;
     
- };
+         };
        
          
+        /**
+        * @function: playSong
+        * @desc: Play currently playing song and loadds new audio file as currentBuzzObject
+        * @param: none
+        */
+        var playSong = function()  {
+          console.log("Inside playSong = function");
+          currentBuzzObject.play();
+          song = currentSong;
+          song.playing = true;    
+        }     
+        
+        
+        /**
+        * @function SongPlay
+        * @desc Play song
+        * @param none
+        /*
         SongPlayer.play = function(song) {
             if (currentSong !== song) { 
                 if (currentBuzzObject) {
@@ -41,8 +66,10 @@
                 
                 currentSong = song;
                 
-                currentBuzzObject.play();
-                song.playing = true;
+                console.log("playSong function call");
+                playSong();
+               //  currentBuzzObject.play();
+               //  song.playing = true;
             
             } else if (currentSong === song) {
                 if (currentBuzzObject.isPaused()) {
@@ -51,6 +78,11 @@
             } 
      };
       
+         /**
+         * @function SongPlayer 
+         * @desc pause current object
+         * @param none
+         /*
          SongPlayer.pause = function(song) {
             currentBuzzObject.pause();
             song.playing = false;
