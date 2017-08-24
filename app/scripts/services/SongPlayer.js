@@ -3,7 +3,7 @@
      * @function SongPlayer
      * @desc play and pause a song
      * @param SongPlayer
-     /*
+     */
      function SongPlayer() {
           var SongPlayer = {};
          
@@ -49,10 +49,10 @@
         
         
         /**
-        * @function SongPlay
-        * @desc Play song
+        * @function SongPlay.play
+        * @desc Play current object (song)
         * @param none
-        /*
+        */
         SongPlayer.play = function(song) {
             if (currentSong !== song) { 
                 if (currentBuzzObject) {
@@ -79,10 +79,10 @@
      };
       
          /**
-         * @function SongPlayer 
-         * @desc pause current object
+         * @function SongPlayer.pause
+         * @desc pause current song (object)
          * @param none
-         /*
+         */
          SongPlayer.pause = function(song) {
             currentBuzzObject.pause();
             song.playing = false;
