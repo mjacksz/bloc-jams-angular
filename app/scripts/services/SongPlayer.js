@@ -10,19 +10,28 @@
           var currentAlbum = Fixtures.getAlbum();
          
           /**
-          * @desc: current song
+          * @attribute  
+          * @desc: current song volume
           * @type (Object)
           */
-          //SongPlayer.currentSong = null;
-          // var currentSong = null;
-         
+          /*
+          if (!SongPlayer.volume) {
+             var SongPlayer.volume = null;  
+             SongPlayer.setVolume(80);
+          }
+          SongPlayer.volume = SongPlayer.setVolume;
+          */
+          
+              
+              
+              
           /**
           * @desc Buzz object audio file
           * @type {Object}
           */
           var currentBuzzObject = null;
                 
-        /**
+         /**
          * @function setSong
          * @desc Stops currently playing song and loads new audio file as currentBuzzObject
          * @param {Object} song
@@ -30,8 +39,6 @@
          var setSong = function(song) { 
             if (currentBuzzObject) {
                 stopSong();
-                //currentBuzzObject.stop();
-                //SongPlayer.currentSong.playing = null;
             }
                           
             currentBuzzObject = new buzz.sound(song.audioUrl, {
@@ -115,7 +122,13 @@
             } 
      };
       
-         
+         /*
+         * @Attribute
+         * @Desc        Hold the value of the volume - sound level
+         */
+         SongPlayer.volume = function(song)  {
+             currentBuzzObject.set
+         }
          
          /**
          * @function SongPlayer.pause

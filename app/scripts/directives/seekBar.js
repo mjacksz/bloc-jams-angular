@@ -13,23 +13,25 @@
             offsetXPercent = Math.max(0, offsetXPercent);
             offsetXPercent = Math.min(1, offsetXPercent);
             return offsetXPercent;
- }; 
+         }; 
+         
+         
          return {
          templateUrl: '/templates/directives/seek_bar.html',
          replace: true,
-         restrict: 'E',
-         scope: {
-         onChange: '&'
-         }, 
-             
-             
-             
+         restrict: 'E',              
          scope: { },
          link: function(scope, element, attributes) {
              scope.value = 0;
              scope.max = 100;
              
              var seekBar = $(element);
+             
+             /*
+              //    scope: {
+              //    onChange: '&'
+              //    }, 
+             */
              
              /**
              * @attribute
