@@ -13,7 +13,7 @@
           * @attribute  
           * @desc: current song volume
           * @type (Object)
-          */
+          */          
           /*
           if (!SongPlayer.volume) {
              var SongPlayer.volume = null;  
@@ -38,6 +38,8 @@
          */      
          var setSong = function(song) { 
             if (currentBuzzObject) {
+                // currentBuzzObject.stop();
+                // SongPlayer.currentSong.playing = null;
                 stopSong();
             }
                           
@@ -126,9 +128,11 @@
          * @Attribute
          * @Desc        Hold the value of the volume - sound level
          */
+         /*
          SongPlayer.volume = function(song)  {
              currentBuzzObject.set
          }
+         */
          
          /**
          * @function SongPlayer.pause

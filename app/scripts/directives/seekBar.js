@@ -19,19 +19,15 @@
          return {
          templateUrl: '/templates/directives/seek_bar.html',
          replace: true,
-         restrict: 'E',              
-         scope: { },
+         restrict: 'E',
+         scope: {
+         onChange: '&'
+         },
          link: function(scope, element, attributes) {
              scope.value = 0;
              scope.max = 100;
              
              var seekBar = $(element);
-             
-             /*
-              //    scope: {
-              //    onChange: '&'
-              //    }, 
-             */
              
              /**
              * @attribute
