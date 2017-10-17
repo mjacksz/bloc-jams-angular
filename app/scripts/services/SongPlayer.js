@@ -124,15 +124,25 @@
             } 
      };
       
-         /*
+         /**
          * @Attribute
          * @Desc        Hold the value of the volume - sound level
          */
          /*
-         SongPlayer.volume = function(song)  {
-             currentBuzzObject.set
+        
+         attribute.$observe("volume", function(newValue) {
+             scope.volume = 90;
          }
          */
+         
+         /**
+         * @Function    SongPlayer.setVolume
+         * @Desc        Set volume on seek bar
+         * @Param       None
+         SongPlayer.setVolume = function(song)  {
+            currentBuzzObject.setVolume(90);
+         }         
+        */
          
          /**
          * @function SongPlayer.pause
@@ -145,6 +155,16 @@
             song.playing = false;
          };
          
+          /**
+         * @function SongPlayer.setVolume
+         * @desc pause current song (object)
+         * @param none
+         */
+         SongPlayer.setVolume = function(volume) {            
+            if (currentBuzzObject) {
+		      currentBuzzObject.setVolume(volume)
+	        }
+         };
          
          /**
          * @Function    SongPlayer.previous
