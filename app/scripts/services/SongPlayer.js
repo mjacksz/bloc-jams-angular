@@ -11,16 +11,11 @@
          
           /**
           * @attribute  
-          * @desc: current song volume
+          * @desc: set song volume
           * @type (Object)
-          */          
-          /*
-          if (!SongPlayer.volume) {
-             var SongPlayer.volume = 0.5;  
-             SongPlayer.volume(80);
-          }
-          SongPlayer.volume = SongPlayer.setVolume;
-        */            
+          */         
+          SongPlayer.volume = 80;
+                    
               
               
           /**
@@ -145,9 +140,9 @@
             song.playing = false;
          };
          
-          /**
-         * @function SongPlayer.setVolume
-         * @desc pause current song (object)
+         /**
+         * @function SongPlayer.setVolume method
+         * @desc Update the volume on change
          * @param none
          */
          SongPlayer.setVolume = function(volume) {            
