@@ -16,13 +16,11 @@
           */          
           /*
           if (!SongPlayer.volume) {
-             var SongPlayer.volume = null;  
-             SongPlayer.setVolume(80);
+             var SongPlayer.volume = 0.5;  
+             SongPlayer.volume(80);
           }
           SongPlayer.volume = SongPlayer.setVolume;
-          */
-          
-              
+        */            
               
               
           /**
@@ -135,14 +133,6 @@
          }
          */
          
-         /**
-         * @Function    SongPlayer.setVolume
-         * @Desc        Set volume on seek bar
-         * @Param       None
-         SongPlayer.setVolume = function(song)  {
-            currentBuzzObject.setVolume(90);
-         }         
-        */
          
          /**
          * @function SongPlayer.pause
