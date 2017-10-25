@@ -1,8 +1,12 @@
 (function() {
     function timecode() {
         return function(seconds) {
+            
             console.log("Just before the Number.isNan conditional:  " + seconds);
-            if (Number.isNaN(seconds)) {
+         
+           // if (Number.isNaN(seconds) == undefined ) {
+            if (seconds === undefined || seconds === null) {
+                console.log("Value of Number.isNan(seconds): " + seconds);
                 return '-:--';
             }
             
